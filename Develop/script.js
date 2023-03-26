@@ -49,7 +49,7 @@ $(function () {
   }; 
 
   var today = dayjs();
-  $('#currentDay').text(today.format('dddd, MMMM D YYYY, h:mm:ss a'));
+  $('#currentDay').text(today.format('dddd, MMMM D YYYY'));
   var hour = dayjs().hour();
   var hourEl = $(".hour");
   var hourEls = ["#hour-9", "#hour-10", "#hour-11", "#hour-12", "#hour-13", "#hour-14", "#hour-15", "#hour-16", "#hour-17", "#hour-18"];
