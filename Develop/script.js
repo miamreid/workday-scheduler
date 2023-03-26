@@ -1,18 +1,52 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
+
 $(function () {
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
+
+  $(".saveBtn").click(function() {
+    var hourDiv = $(this).parent().attr("id");
+    var hourText = $(this).parent().children("textarea").val();
+    localStorage.setItem(hourDiv, hourText);
+  });
+
+  var notes9am = localStorage.getItem("hour-9");
+  if(notes9am !== null) {
+    $("#hour-9 textarea").val(notes9am);
+  };
+  var notes10am = localStorage.getItem("hour-10");
+  if(notes10am !== null) {
+    $("#hour-10 textarea").val(notes10am);
+  };
+  var notes11am = localStorage.getItem("hour-11");
+  if(notes11am !== null) {
+    $("#hour-11 textarea").val(notes11am);
+  };
+  var notes12pm = localStorage.getItem("hour-12");
+  if(notes12pm !== null) {
+    $("#hour-12 textarea").val(notes12pm);
+  };
+  var notes1pm = localStorage.getItem("hour-13");
+  if(notes1pm !== null) {
+    $("#hour-13 textarea").val(notes1pm);
+  };
+  var notes2pm = localStorage.getItem("hour-14");
+  if(notes2pm !== null) {
+    $("#hour-14 textarea").val(notes2pm);
+  };
+  var notes3pm = localStorage.getItem("hour-15");
+  if(notes3pm !== null) {
+    $("#hour-15 textarea").val(notes3pm);
+  }; 
+  var notes4pm = localStorage.getItem("hour-16");
+  if(notes4pm !== null) {
+    $("#hour-16 textarea").val(notes4pm);
+  };
+  var notes5pm = localStorage.getItem("hour-17");
+  if(notes5pm !== null) {
+    $("#hour-17 textarea").val(notes5pm);
+  };
+  var notes6pm = localStorage.getItem("hour-18");
+  if(notes6pm !== null) {
+    $("#hour-18 textarea").val(notes6pm);
+  }; 
 
   var today = dayjs();
   $('#currentDay').text(today.format('dddd, MMMM D YYYY, h:mm:ss a'));
