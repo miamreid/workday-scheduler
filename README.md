@@ -8,7 +8,7 @@ The user is also easily able to see what events/hours have passed, because the c
 This project helped me gain a solid understanding of using a for loop and traversing the DOM using jquery. It also helped with practicing using dayjs to grab and display the 
 current day and time.
 
-<img width="1507" alt="Screen Shot 2023-03-27 at 9 25 12 PM" src="https://user-images.githubusercontent.com/124822025/228107196-208aad20-0be4-4ca5-98fa-32364b97aaac.png">
+<img width="1679" alt="Screen Shot 2023-03-27 at 9 23 24 PM" src="https://user-images.githubusercontent.com/124822025/228107293-a7e90aba-6716-4cec-aced-dc557ed87ebf.png">
 
 ## Usage
 
