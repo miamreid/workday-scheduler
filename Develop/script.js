@@ -142,5 +142,6 @@ $(function () {
     }
   }
   };
+  //If the hour is past 6pm, the all timeblocks are moved to the past class.
 timeBlocks(); 
 });
