@@ -5,7 +5,10 @@ In order for users to log notes for themselves and schedules events, tasks, or t
 
 The user is also easily able to see what events/hours have passed, because the color of the timeblocks changes to gray. The present hour is shown in red, and all future events are shown in green. 
 
-This project helped me gain a solid understanding of using a for loop and traversing the DOM using jquery. It also helped with practicing using dayjs to grab and display the current day and time.
+This project helped me gain a solid understanding of using a for loop and traversing the DOM using jquery. It also helped with practicing using dayjs to grab and display the 
+current day and time.
+
+<img width="1507" alt="Screen Shot 2023-03-27 at 9 25 12 PM" src="https://user-images.githubusercontent.com/124822025/228107196-208aad20-0be4-4ca5-98fa-32364b97aaac.png">
 
 ## Usage
 
@@ -15,8 +18,7 @@ When the page is closed and reloaded, all saved events are stored in the same ho
 
 Give it a try! [https://miamreid.github.io/workday-scheduler]
 
-Or see the repository: []
-
+Or see the repository: [https://github.com/miamreid/workday-scheduler]
 
 ## License
 
