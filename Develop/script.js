@@ -1,12 +1,14 @@
 
 $(function () {
-
+//The click function is activated on the save button click
+//this refers to the button, parent refers to the parent element(the time-block div), and attr refers to the id of the parent div (hour-9, hour-10, etc).
+//The declared variables save the user text input to the key paid in local storage
   $(".saveBtn").click(function() {
     var hourDiv = $(this).parent().attr("id");
     var hourText = $(this).parent().children("textarea").val();
     localStorage.setItem(hourDiv, hourText);
   });
-
+//Var notesx checks for each div in the local storage and retrieves the saved value, if there is one, and inputs the value back to it's designated hour on the page.
   var notes9am = localStorage.getItem("hour-9");
   if(notes9am !== null) {
     $("#hour-9 textarea").val(notes9am);
@@ -47,13 +49,15 @@ $(function () {
   if(notes6pm !== null) {
     $("#hour-18 textarea").val(notes6pm);
   }; 
-
+//Using dayjs, the current day is displayed on the page by day of the week, month, day, and year
   var today = dayjs();
   $('#currentDay').text(today.format('dddd, MMMM D YYYY'));
+  //Using dayjs, the hour variable grabs the current hour
   var hour = dayjs().hour();
   var hourEl = $(".hour");
   var hourEls = ["#hour-9", "#hour-10", "#hour-11", "#hour-12", "#hour-13", "#hour-14", "#hour-15", "#hour-16", "#hour-17", "#hour-18"];
 
+//The timeBlocks function continuously checks for the current hour (using dayjs) and checks of it is equal to each timeblock div. Each conditional statement runs through a for loop to assign each consecutive div with the future class.
   function timeBlocks() {
   if(hour < 9) {
     for(i = 0; i < hourEl.length; i++) {
